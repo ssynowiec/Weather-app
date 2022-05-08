@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ssynowiec">
+
+    <!-- Primary Meta Tags -->
+    <title>Weather App | Check weather in your location</title>
+    <meta name="title" content="Weather App | Check weather in your location" />
+    <meta name="description" content="Check weather in your location. Api based weather app">
+    <meta name="keywords" content="weather, app, api, js, project">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ssynowiec.github.io/weather-app/" />
+    <meta property="og:title" content="Weather App | Check weather in your location" />
+    <meta property="og:description" content="Check weather in your location. Api based weather app" />
+    <meta property="og:image" content="./dist/img/weather-img.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ssynowiec.github.io/weather-app/" />
+    <meta property="twitter:title" content="Weather App | Check weather in your location" />
+    <meta property="twitter:description" content="Check weather in your location. Api based weather app" />
+    <meta property="twitter:image" content="./dist/img/weather-img.jpg" />
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/44d10e3538.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./dist/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./dist/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./dist/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./dist/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./dist/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./dist/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./dist/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./dist/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./dist/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./dist/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./dist/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- My styles -->
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+</head>
+</head>
+
+<body>
+    <header>
+        <img src="./dist/img/weather-news.png" alt="weather" class="app-logo">
+        <h1 class="title">Weather App</h1>
+        <p class="subtitle">Check weather in your location</p>
+    </header>
+    <main>
+        <div class="form">
+            <label for="city">Enter your location</label>
+            <input type="text" name="city" id="city" class="city" placeholder="Your city" value="Warsaw">
+            <button class="check-weather">Check weather</button>
+        </div>
+
+        <section class="weather-info-section">
+            <div class="weather-info-header">
+                <button class="back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <!-- <h1>Weather App</h1> -->
+                <p class="location-info">
+                    <span class="your-city">Warsaw</span>, <span class="your-country">Poland</span>
+                </p>
+            </div>
+            <main class="weather-info">
+                <section class="today-info">
+                    <h2 class="today-title">Today</h2>
+                    <p class="date">Sun, 3 April</p>
+                    <p class="temperature">
+                        <span class="current">2</span><sup>°C</sup>
+                    </p>
+                </section>
+
+                <section class="next-days">
+                    <div class="day">
+                        <p class="weather-date">04.04</p>
+                        <i class="weather-icon fa-solid"></i>
+                        <p class="day-temperature">10°</p>
+                    </div>
+                    <div class="day">
+                        <p class="weather-date">05.04</p>
+                        <i class="weather-icon fa-solid"></i>
+                        <p class="day-temperature">-4°</p>
+                    </div>
+                    <div class="day">
+                        <p class="weather-date">06.04</p>
+                        <i class="weather-icon fa-solid"></i>
+                        <p class="day-temperature">-4°</p>
+                    </div>
+                    <div class="day">
+                        <p class="weather-date">07.04</p>
+                        <i class="weather-icon fa-solid"></i>
+                        <p class="day-temperature">-4°</p>
+                    </div>
+                </section>
+
+                <section class="weather-conditions">
+                    <div class="conditions-top">
+                        <div class="condition pressure">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                <p>pressure</p>
+                            </div>
+                            <p><span class="current">1011</span>hPa</p>
+                        </div>
+                        <div class="condition perceptible">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-temperature-low"></i>
+                                <p>perceptible
+                                    <!--temperature-->
+                                </p>
+                            </div>
+                            <p><span class="current">0</span>°</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="conditions-mid">
+                        <div class="condition humidity">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-droplet"></i>
+                                <p>humidity</p>
+                            </div>
+                            <p><span class="current">47</span>%</p>
+                        </div>
+                        <div class="condition wind">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-wind"></i>
+                                <p>wind</p>
+                            </div>
+                            <p><span class="current">2.28</span>m/s</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="conditions-bottom">
+                        <div class="condition clouds">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-cloud"></i>
+                                <p>clouds</p>
+                            </div>
+                            <p><span class="current">0</span>%</p>
+                        </div>
+                        <div class="condition visibility">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-smog"></i>
+                                <p>visibility</p>
+                            </div>
+                            <p><span class="current">10000</span>m</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2022 ssynowiec</p>
+    </footer>
+    <script src="./dist/js/script.min.js"></script>
+</body>
+
+</html>

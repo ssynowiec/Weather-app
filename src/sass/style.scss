@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	// background-color: #333;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.weather-info-header {
+	display: flex;
+	align-items: center;
+
+	.back {
+		background-color: transparent;
+		border: none;
+		color: black;
+
+		i {
+			padding: 1rem;
+		}
+	}
+
+	.location-info {
+		padding-left: 3.5rem;
+	}
+}
+
+.app-logo {
+	padding-top: 2rem;
+	height: 20vh;
+}
+
+.title,
+.subtitle {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.city {
+	padding: 0.5rem;
+	margin: 1rem;
+}
+
+.check-weather {
+	padding: 0.5rem 1rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.weather-info-section {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.weather-info {
+	.today-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 30vh;
+
+		.today-title {
+			padding-bottom: 10px;
+		}
+
+		.temperature {
+			padding-top: 50px;
+			font-size: 2rem;
+
+			.current {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	.next-days {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20vh;
+
+		.day {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			margin: 5px;
+			width: 20%;
+			height: 15vh;
+			text-align: center;
+
+			.weather-icon {
+				padding: 10px 0;
+			}
+		}
+	}
+
+	.weather-conditions {
+		height: 30vh;
+
+		div {
+			display: flex;
+
+			.condition {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+				text-align: center;
+
+				&-title {
+					display: flex;
+					align-items: center;
+					text-align: left;
+
+					i {
+						padding: 0 15px;
+					}
+				}
+
+				p {
+					padding: 8px 0;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	text-align: center;
+	padding: 1.5rem;
+}
